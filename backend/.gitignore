@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+
+venv/
+.railway/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+*.log
+uploads/
+
+# Local/exported model formats that are not used by deployment.
+models/*.h5
+models/*.keras

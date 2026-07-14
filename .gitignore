@@ -1,0 +1,37 @@
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Build outputs
+dist/
+dev-dist/
+build/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Tool state
+.railway/
+.vercel/
+.agents/
+.codex/
+
+# Logs and local run output
+*.log
+.codex-*.err
+.codex-*.out
+
+# Local uploads
+uploads/
+
+# Local/exported model formats that are not used by deployment
+models/*.h5
+models/*.keras

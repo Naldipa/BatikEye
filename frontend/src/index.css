@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* View Transition API styles */
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.3s;
+  }
+}
+
+.view-transition {
+  view-transition-name: unique-transition;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Global styles for BatikEye */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-batik-dark font-sans;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-batik-gold rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-batik-brown;
+}
+
+/* Transition untuk semua link dan button */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Fokus ring yang ramah aksesibilitas */
+*:focus-visible {
+  @apply outline-none ring-2 ring-batik-gold ring-offset-2;
+}
